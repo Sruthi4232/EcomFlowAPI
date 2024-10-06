@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Registration Form Submission
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('register-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent the default form submission behavior
+        
+        // Get values from the form fields
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phoneno = document.getElementById('phoneno').value;
+        const password = document.getElementById('password').value;
+
+        // Create user data object
+        const userData = {
+            name: name,
+            email: email,
+            phoneno: phoneno,
+            password: password,
+        };
+
+        // Send the registration data to the server
+        fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json' // Indicate that the request body contains JSON
+            },
+            body: JSON.stringify(userData) // Convert the user data object to JSON
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Registration Successful! Redirecting to login page...');
+                window.location.href = '/login'; // Redirect to login page after registration
+            } else {
+                return response.json().then(err => {
+                    alert(err.message); // Display error message from server
+                });
+            }
+        })
+        .catch(error => {
+            alert('Error: ' + error.message); // Display network or other errors
+        });
+    });
+});
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="phoneno">Phone number:</label>
+                <div class="phone-input">
+                    <span class="country-code">+91</span>
+                    <input type="number" id="phoneno" name="phoneno" required placeholder="Enter your phone number">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required placeholder="At least 6 characters">
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required placeholder="Re-enter the password">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>

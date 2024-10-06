@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    background-image: url('https://market-resized.envatousercontent.com/previews/files/403495460/preview.jpg?w=590&h=300&cf_fit=crop&format=auto&q=85&s=eddd4fe5d74e8858ccd19e372ef5f6d89353ae6f10dcb4add2a1480fa1d9188a'); /* Relative path */
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 60px;
+    background-color:black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color:white;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color:white;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+}
+
+.country-code {
+    background-color: #eee;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="number"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.phone-input input[type="number"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #3e8e41;
+}

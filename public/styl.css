@@ -1,0 +1,265 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    box-sizing: border-box;
+    background-image: url('/images/hom.png');
+    transition: transform 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .logo h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: green; 
+}
+
+.navbar li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-button {
+    background-color: green; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background-color: darkgreen;
+}
+
+.hero-section {
+    background: url('background-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: pink;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section h1 {
+    color: aqua;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: yellow;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #333;
+    color: yellow;
+}
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('hero-background.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: white;
+    z-index: 2;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: brown;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: red;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: brown;
+}
+.collections-section {
+    padding: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.collection-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.collection-card:hover {
+    transform: scale(1.05);
+}
+
+.collection-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.craftsmanship-section {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+    position: relative;
+}
+
+.craftsmanship-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.craftsmanship-content img {
+    width: 80%;
+    border-radius: 15px;
+}
+
+.craftsmanship-content p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+.testimonials-section {
+    padding: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.testimonials-slider {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.testimonial-card {
+    background: bisque;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
+
+.footer-section {
+    background-color: black;
+    color: white;
+    padding: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
